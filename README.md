@@ -75,9 +75,27 @@ backend/src/
 ```bash
 npm run dev       # Desenvolvimento (nodemon)
 npm start         # Produção
+npm test          # Rodar testes com cobertura
+npm run test:watch # Testes em modo watch
 npm run lint      # Verificar código
 npm run lint:fix  # Corrigir formatação
 ```
+
+## Testes
+
+69 testes automatizados com Jest + Supertest usando MongoDB em memória.
+
+```bash
+npm test  # Roda todos os testes com relatório de cobertura
+```
+
+| Módulo | Cobertura |
+|--------|-----------|
+| Models | 100% |
+| Routes | 100% |
+| Controllers | 89% |
+| Middlewares | 71% |
+| **Total** | **85%** |
 
 ## Licença
 
