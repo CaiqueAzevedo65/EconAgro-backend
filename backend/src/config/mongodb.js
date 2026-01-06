@@ -2,6 +2,11 @@ const mongoose = require('mongoose');
 
 const connectDB = async () => {
   try {
+    // Skip connection if already connected (tests use memory server)
+    if (mongoose.connection.readyState === 1) {
+      return;
+    }
+
     if (!process.env.MONGODB_URI) {
       throw new Error('MONGODB_URI não está definida nas variáveis de ambiente');
     }
